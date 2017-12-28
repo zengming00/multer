@@ -5,8 +5,12 @@ on top of [busboy](https://github.com/mscdex/busboy) for maximum efficiency.
 
 **NOTE**: Multer will not process any form which is not multipart (`multipart/form-data`).
 
-## Language
-English [简体中文](./doc/README-zh-cn.md)
+## Translations 
+
+This README is also available in other languages:
+
+- [简体中文](https://github.com/expressjs/multer/blob/master/doc/README-zh-cn.md) (Chinese)
+- [한국어](https://github.com/expressjs/multer/blob/master/doc/README-ko.md) (Korean)
 
 ## Installation
 
@@ -96,6 +100,7 @@ Key | Description
 `dest` or `storage` | Where to store the files
 `fileFilter` | Function to control which files are accepted
 `limits` | Limits of the uploaded data
+`preservePath` | Keep the full path of files instead of just the base name
 
 In an average web app, only `dest` might be required, and configured as shown in
 the following example.
@@ -276,8 +281,7 @@ app.post('/profile', function (req, res) {
 
 ## Custom storage engine
 
-See [the documentation here](/StorageEngine.md) if you want to build your own
-storage engine.
+For information on how to build your own storage engine, see [Multer Storage Engine](https://github.com/expressjs/multer/blob/master/StorageEngine.md).
 
 ## License
 
